@@ -1,0 +1,61 @@
+.containerOTP {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-form);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        font-weight: 700;
+    }
+
+    .resend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        .resendButton {
+            margin-top: 10px;
+            height: 40px;
+            width: 130px;
+            border-radius: 5px;
+            background-color: rgb(4, 156, 4);
+            outline: none;
+            border: none;
+            color: white;
+            padding: 5px;
+        }
+    }
+
+    button {
+        margin-top: 10px;
+        height: 40px;
+        width: 130px;
+        border-radius: 5px;
+        background-color: var(--button-background);
+        outline: none;
+        border: none;
+        color: white;
+        padding: 5px;
+    }
+
+    .inputOTP {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        input {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            outline: 1px solid rgba(128, 128, 128, 0.308);
+            text-align: center;
+        }
+    }
+}

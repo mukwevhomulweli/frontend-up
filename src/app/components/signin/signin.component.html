@@ -1,0 +1,43 @@
+<div class="containerSignIn">
+    <h1>Login Here</h1>
+    <p>Start seeing currencies with a third eye. 👁️</p>
+    <div class="card">
+        <div class="card-body">
+            <form *ngIf="form" [formGroup]="form" (ngSubmit)="submitForm()">
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <input type="email" id="email" formControlName="email" placeholder="you@example.com">
+                </div>
+                <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+                    class="formValidation">
+                    <div *ngIf="form.get('email')?.errors?.['required']" class="error">Email is required.</div>
+                    <div *ngIf="form.get('email')?.errors?.['email']" class="error">Invalid email format.</div>
+                </div>
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                    <input type="password" id="password" formControlName="password"
+                        placeholder="Password Atleast 8 Characters">
+                    <ion-icon name="eye-outline" (click)="showOrHide()" id="ion"></ion-icon>
+                </div>
+                <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)"
+                    class="formValidation">
+                    <div *ngIf="form.get('password')?.errors?.['required']" class="error">Password is required.</div>
+                    <div *ngIf="form.get('password')?.errors?.['minlength']" class="error">Password should have at least
+                        8
+                        characters.
+                    </div>
+                </div>
+                <button type="submit" [disabled]="form.invalid">Login</button>
+            </form>
+
+        </div>
+    </div>
+    <p class="noAccount">Don't have an account? <a routerLink="/register" class="anchor">Register</a></p>
+    <div class="alert alert-danger" role="alert" *ngIf="creditsFalse">
+        You have entered wrong credentials
+    </div>
+</div>

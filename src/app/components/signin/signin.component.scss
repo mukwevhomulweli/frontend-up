@@ -1,0 +1,124 @@
+.containerSignIn {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-form);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-weight: 700;
+    }
+
+    p {
+        color: grey;
+    }
+
+    .alert {
+        margin-top: 10px;
+        width: 450px;
+        text-align: center;
+    }
+
+    .noAccount {
+        color: black;
+        margin-top: 10px;
+    }
+
+}
+
+.card {
+    height: 300px;
+    width: 450px;
+
+    .card-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            .formValidation {
+                display: flex;
+                justify-content: left !important;
+                width: 100%;
+
+                .error {
+                    display: flex;
+                    justify-content: left;
+                    color: red;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            .inputContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                background-color: var(--input-background);
+                height: 50px;
+                width: 100%;
+                border-radius: 10px;
+
+                ion-icon {
+                    font-size: 20px;
+                }
+
+                .iconsContainer {
+                    height: 40px;
+                    width: 45px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+
+                    ion-icon {
+                        font-size: 25px;
+                        color: var(--button-background);
+                    }
+                }
+
+                input {
+                    height: 45px;
+                    width: 85%;
+                    outline: none;
+                    border: none;
+                    background-color: var(--input-background);
+
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px var(--input-background) inset !important;
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+                margin-top: 20px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                color: white;
+                background-color: var(--button-background);
+            }
+        }
+    }
+
+
+}
