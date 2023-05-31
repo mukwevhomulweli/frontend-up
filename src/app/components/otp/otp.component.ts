@@ -44,6 +44,23 @@ export class OtpComponent {
       })
     }
   }
+  moveNext() {
+
+    const inputs = document.querySelectorAll('input');
+    const inputArr = Array.from(inputs);
+
+    if (inputArr[0].value.length === 1) {
+      inputArr[1].focus()
+    }
+    if (inputArr[1].value.length === 1) {
+      inputArr[2].focus();
+    }
+
+    if (inputArr[2].value.length === 1) {
+      inputArr[3].focus()
+    }
+
+  }
 
 
 
