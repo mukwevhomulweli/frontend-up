@@ -4,11 +4,15 @@
     <div class="card">
         <div class="card-body">
             <form *ngIf="form" [formGroup]="form" (ngSubmit)="submitForm()">
+                <div class="logo">
+                    <ion-icon name="wallet"></ion-icon>
+                </div>
                 <div class="inputContainer">
                     <div class="iconsContainer">
                         <ion-icon name="mail-outline"></ion-icon>
                     </div>
                     <input type="email" id="email" formControlName="email" placeholder="you@example.com">
+                    <p></p>
                 </div>
                 <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
                     class="formValidation">
@@ -36,7 +40,7 @@
 
         </div>
     </div>
-    <p class="noAccount">Don't have an account? <a routerLink="/register" class="anchor">Register</a></p>
+    <p class="noAccount">Don't have an account? <a routerLink="/signup" class="anchor">Register</a></p>
     <div class="alert alert-danger" role="alert" *ngIf="creditsFalse">
         You have entered wrong credentials
     </div>

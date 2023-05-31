@@ -1,1 +1,75 @@
-<p>signup works!</p>
+<div class="containerSignIn">
+    <h1>Register Here</h1>
+    <p>Start seeing currencies with a third eye. 👁️</p>
+    <div class="card">
+        <div class="card-body">
+            <form *ngIf="form" [formGroup]="form" (ngSubmit)="submitForm()">
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <input type="text" id="username" formControlName="username" placeholder="Your username">
+                    <p></p>
+                </div>
+                <div *ngIf="form.get('username')?.invalid && (form.get('username')?.dirty || form.get('username')?.touched)"
+                    class="formValidation">
+                    <div *ngIf="form.get('username')?.errors?.['required']" class="error">username is required.</div>
+                    <div *ngIf="form.get('username')?.errors?.['minlength']" class="error">username should have at least
+                        4
+                        characters.
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <input type="email" id="email" formControlName="email" placeholder="you@example.com">
+                    <p></p>
+                </div>
+                <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+                    class="formValidation">
+                    <div *ngIf="form.get('email')?.errors?.['required']" class="error">Email is required.</div>
+                    <div *ngIf="form.get('email')?.errors?.['email']" class="error">Invalid email format.</div>
+                </div>
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                    <input type="password" id="password" formControlName="password"
+                        placeholder="Password Atleast 8 Characters">
+                    <ion-icon name="eye-outline" (click)="showOrHide()" id="ion"></ion-icon>
+                </div>
+                <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)"
+                    class="formValidation">
+                    <div *ngIf="form.get('password')?.errors?.['required']" class="error">Password is required.</div>
+                    <div *ngIf="form.get('password')?.errors?.['minlength']" class="error">Password should have at least
+                        8
+                        characters.
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <div class="iconsContainer">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                    <select formControlName="currency">
+                        <option value="">Select your Currency</option>
+                        <option value="ZAR">ZAR</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+
+                </div>
+                <button type=" submit" [disabled]="form.invalid">Register</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="alert alert-success" role="alert" *ngIf="registered">
+        Account succesfully registered! <a routerLink="/signin">Login here</a>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="accountExists">
+        Account is already registered/ Missing some fields
+    </div>
+
+</div>
