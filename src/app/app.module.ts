@@ -8,7 +8,8 @@ import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { IonicModule } from '@ionic/angular';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http'
     SigninComponent,
     SignupComponent,
     OtpComponent,
+    DashboardComponent,
 
   ],
   imports: [

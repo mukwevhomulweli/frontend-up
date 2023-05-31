@@ -1,6 +1,9 @@
 <div class="containerOTP">
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert" *ngIf="oldOTP">
         OTP has been sent to your email: {{ email }}
+    </div>
+    <div class="alert alert-success" role="alert" *ngIf="newOTP">
+        OTP has been resent to your email: {{ email }}
     </div>
     <h1>Enter OTP to Verify</h1>
     <div class="inputOTP">
@@ -10,8 +13,12 @@
         <input type="text" maxlength="1">
     </div>
     <div class="resend">
-        <button>Submit</button>
-        <button class="resendButton">Resend OTP</button>
+        <button (click)="submit()">Submit</button>
+        <button class="resendButton" (click)="resendOTP()">Resend OTP</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="wrongOTP">
+        You entered a wrong OTP
     </div>
 
 </div>
