@@ -1,2 +1,2 @@
 
-export const userUrl = 'http://localhost:3000/api/user'
+export const userUrl = 'https://backend-up.onrender.com/api/user'
