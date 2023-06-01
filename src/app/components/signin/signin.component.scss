@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: center;
 
+    img {
+        height: 250px;
+    }
+
     h1 {
         font-weight: 700;
     }
@@ -142,5 +146,13 @@
 @media (width <=900px) {
     .card {
         width: 95%;
+    }
+
+    .containerSignIn {
+        img {
+            height: 190px;
+            position: relative;
+            bottom: 50px;
+        }
     }
 }
