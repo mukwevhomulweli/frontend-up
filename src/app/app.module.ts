@@ -9,7 +9,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component'
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component'
     SignupComponent,
     OtpComponent,
     DashboardComponent,
+    HeaderComponent,
 
   ],
   imports: [

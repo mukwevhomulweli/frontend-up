@@ -71,3 +71,14 @@
         }
     }
 }
+
+@media (width <=900px) {
+    .containerOTP {
+
+        .alert,
+        .alert-danger {
+            text-align: center;
+            width: 90%;
+        }
+    }
+}

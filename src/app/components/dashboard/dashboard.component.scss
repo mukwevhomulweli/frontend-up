@@ -1,0 +1,95 @@
+.dashboard {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-form);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    button {
+        margin-top: 10px;
+        height: 60px;
+        width: 150px;
+        border-radius: 5px;
+        background-color: var(--button-background);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        ion-icon {
+            font-size: 17px;
+            font-weight: 700;
+        }
+    }
+
+    h1 {
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+        background-color: white;
+        width: 500px;
+        border-radius: 10px;
+        gap: 3px;
+        box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.103);
+
+        .currencyDiv {
+            height: 70px;
+            width: 40px;
+            box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.158);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            height: 70px;
+            width: 300px;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+        select {
+            height: 70px;
+            width: 140px;
+            border: none;
+            outline: none;
+        }
+
+        select:active,
+        select:active,
+        select:hover {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+@media (width <=900px) {
+    .dashboard {
+        .inputForm {
+            width: 95%;
+
+
+            input {
+                width: 45%;
+            }
+
+
+        }
+    }
+
+}

@@ -18,6 +18,9 @@ export class SigninComponent {
       password: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
+  ngOnInit() {
+    localStorage.clear();
+  }
 
   submitForm() {
     console.log(this.form.value);

@@ -147,3 +147,16 @@
 
 
 }
+
+@media (width <=900px) {
+    .card {
+        width: 95%;
+    }
+
+    .containerSignIn {
+        .alert {
+            width: 90%;
+        }
+    }
+
+}

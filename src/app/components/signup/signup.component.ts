@@ -38,7 +38,9 @@ export class SignupComponent {
       ion?.setAttribute('name', 'eye-outline')
     }
   }
-
+  ngOnInit() {
+    localStorage.clear();
+  }
   submitForm() {
     console.log(this.form.value)
 
